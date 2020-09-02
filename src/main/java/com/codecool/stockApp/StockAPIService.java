@@ -13,8 +13,9 @@ public class StockAPIService {
 	private RemoteURLReader remoteURLReader = new RemoteURLReader();
 
 	/** Get stock price from iex and return as a double
-     *  @param symbol Stock symbol, for example "aapl"
-     **/
+	 * @param symbol Stock symbol, for example "aapl"
+	 *
+	 * @return*/
 	public double getPrice(String symbol) throws IOException {
         String url = String.format(apiPath, symbol);
         String result = remoteURLReader.readFromUrl(url);
